@@ -20,3 +20,9 @@ to your gatsby-config.js
 
 ### Contributions
 All contributions are welcome, as long as you use `https://github.com/enhancv/prettier` to format the code and make a pull-request with properly documented changes.
+
+## License
+Licensed under the MIT license.
+
+Create your resume with Enhancv to make sure the key things come across. Stand out and get that interview.
+https://enhancv.com
