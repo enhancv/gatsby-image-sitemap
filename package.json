@@ -11,5 +11,17 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "sitemap": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enhancv/gatsby-image-sitemap"
+  },
+  "keywords": [
+    "gatsby",
+    "sitemap",
+    "image"
+  ],
+  "bugs": {
+    "url": "https://github.com/enhancv/gatsby-image-sitemap/issues"
   }
 }
