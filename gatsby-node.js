@@ -63,8 +63,9 @@ exports.onPostBuild = async ({ graphql, pathPrefix }, pluginOptions) => {
             }
 
             const srcSets = el
-                .find("source")
-                .attr("srcSet")
+                .find("picture")
+                .find("img")
+                .attr("srcset")
                 .split("\n");
 
             srcSets.forEach(srcSet => {
