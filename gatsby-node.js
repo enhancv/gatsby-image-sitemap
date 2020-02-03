@@ -56,22 +56,15 @@ exports.onPostBuild = async ({ graphql, pathPrefix }, pluginOptions) => {
         // links from the <source /> tag 
         pageDOM(options.gatsbyImageSelector).each(function() {
             const el = cheerio(this);
-            const alt = el.find("img").attr("alt");
+            const img = el.find("picture").find("img");
+            const alt = img.attr("alt");
+            const src = img.attr("src");
 
             if (options.ignoreImagesWithoutAlt && !alt) {
                 return;
             }
-
-            const srcSets = el
-                .find("picture")
-                .find("img")
-                .attr("srcset")
-                .split("\n");
-
-            srcSets.forEach(srcSet => {
-                const path = srcSet.split(" ")[0];
-                pageImages[path] = alt;
-            });
+                
+            pageImages[src] = alt;
         });
 
         const pageImagesKeys = Object.keys(pageImages);
